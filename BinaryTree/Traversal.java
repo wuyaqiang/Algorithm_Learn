@@ -221,8 +221,8 @@ class Traversal {
         root.left.left = new Node(4);
         root.left.right = new Node(5);
 
-        // System.out.println("\n先序遍历如下(递归)：");
-        // preOrderRecursive(root);
+        //  System.out.println("\n先序遍历如下(递归)：");
+        //  preOrderRecursive(root);
         // System.out.println("\n先序遍历如下(非递归)：");
         // preOrderIterative(root);
         // System.out.println("\n中序遍历如下(递归)：");
