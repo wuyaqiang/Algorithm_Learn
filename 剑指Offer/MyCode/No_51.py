@@ -63,7 +63,7 @@ def count_of_smaller_numbers(nums):
 if __name__ == '__main__':
 
     # print(reverse_pairs_1())
-    # print(reverse_pairs_2([2,4,3,5,1]))
+    print(reverse_pairs_2([2,4,3,5,1]))
     # print(count_of_smaller_numbers())
 
 
