@@ -3,6 +3,7 @@
 leetcode 295. Find Median from Data Stream
 leetcode 480. Sliding Window Median
 '''
+
 import heapq
 
 class MedianFinder:
