@@ -12,9 +12,9 @@ class TreeNode(object):
 
 class SD_BT:
     '''
-    二叉树的序列化和非序列化
+    二叉树的序列化和反序列化
     '''
-    def serialize(root):
+    def serialize(self, root):
         def helper(node):
             if not node:
                 res.append("#")
@@ -26,7 +26,7 @@ class SD_BT:
         helper(root)
         return ",".join(res)
 
-    def deserialize(data):
+    def deserialize(self, data):
         def helper():
             node_val = next(val_list)
             if node_val == "#":
@@ -39,3 +39,36 @@ class SD_BT:
 
         val_list = iter(data.split(","))
         return helper()
+
+
+class SD_BST:
+    '''
+    二叉搜索树的序列化和反序列化
+    '''
+    def serialize(self, root):
+
+
+    def deserialize(self, data):
+        pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
