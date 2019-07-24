@@ -2,6 +2,8 @@
 剑指 Offer 第34题 及其变体
 leetcode 112. Path Sum
 leetcode 113. Path Sum II
+leetcode 437. Path Sum III (待做)
+leetcode 257. Binary Tree Paths (待做)
 '''
 
 def has_path_sum(root, s):
