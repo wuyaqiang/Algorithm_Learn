@@ -57,7 +57,22 @@ def odd_even_linked_list(head):
     '''
     leetcode 328. Odd Even Linked List
     '''
+    if not head or not head.next:
+        return head
 
+    odd_head, even_head = head, head.next
+    odd, even = odd_head, even_head
+    while even:
+        odd.next = even.next
+        if not even.next:
+            even.next = None
+            break
+        odd = odd.next
+        even.next = odd.next
+        even = even.next
+    odd.next = even_head
+
+    return odd_head
 
 
 
