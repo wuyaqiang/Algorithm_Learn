@@ -46,7 +46,7 @@ class SD_BST:
     二叉搜索树的序列化和反序列化
     '''
     def serialize(self, root):
-
+        pass
 
     def deserialize(self, data):
         pass
