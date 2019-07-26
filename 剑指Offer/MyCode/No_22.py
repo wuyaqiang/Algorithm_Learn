@@ -9,6 +9,7 @@ class ListNode:
         self.next = None
 
 def remove_nth_from_end(head, n):
+    # 本题要考虑 n 小于 1 和 n 大于链表长度两种情况
     if not head or n < 1:
         return head
     sentinel = ListNode(0)
