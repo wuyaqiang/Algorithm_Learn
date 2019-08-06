@@ -2,6 +2,8 @@
 剑指 Offer 第18题 及其变体
 leetcode 237. Delete Node in a Linked List
 leetcode 203. Remove Linked List Elements
+leetcode 83. Remove Duplicates from Sorted List
+leetcode 82. Remove Duplicates from Sorted List II
 '''
 
 class ListNode:
@@ -31,7 +33,49 @@ def remove_elements(head, val):
         cur = cur.next
     return sentinel.next
 
-def delete_duplicate_node(node):
+def delete_duplicate_node_1(head):
     '''
+    leetcode 83. Remove Duplicates from Sorted List
+    '''
+    if not head:
+        return head
+    cur = head
+    while cur.next:
+        if cur.next.val == cur.val:
+            cur.next = cur.next.next
+            continue
+        cur = cur.next
+    return head
 
+
+def delete_duplicate_node_2(head):
     '''
+    leetcode 82. Remove Duplicates from Sorted List II
+    '''
+    sentinel = ListNode(0)
+    sentinel.next = head
+    pre, cur = sentinel, head
+    while cur:
+        while cur.next and cur.val == cur.next.val:
+            cur = cur.next
+        if pre.next == cur:
+            pre = pre.next
+        else:
+            pre.next = cur.next
+        cur = cur.next
+    return sentinel.next
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
