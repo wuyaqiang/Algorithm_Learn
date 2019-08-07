@@ -26,7 +26,8 @@ def two_number_in_two_times(nums):
     diff = 0
     for n in nums:
         diff ^= n
-    diff = diff & -diff
+    diff = diff & (~diff + 1)   # 得到diff中的最后一位1
+    # diff = diff & -diff
     n1, n2 = 0, 0
     for n in nums:
         if n & diff == 0:
@@ -41,8 +42,29 @@ def one_number_in_three_times(nums):
     整数数组中除了一个数字，其他全部出现三次，找出该数字
     '''
     # 解法一 数学运算：
-    return (3 * sum(set(nums)) - sum(nums)) // 2
+    # return (3 * sum(set(nums)) - sum(nums)) // 2
+
     # 解法二 位运算：
+    res = 0
+    for i in range(32):
+        cur_bit_sum = 0
+        mask = (1 << i)
+        for n in nums:
+            if n & mask:
+                cur_bit_sum += 1
+
+        if cur_bit_sum % 3 == 1:
+            res |= mask
+
+    # If signed bit is set then adjust the number
+    if res & 1 << 31:
+        res -= 2 ** 32
+
+    return res
+
+    # 解法三 位运算：
+    # 链接：https://cloud.tencent.com/developer/article/1131945
+
 
 
 if __name__ == '__main__':
