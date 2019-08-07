@@ -56,8 +56,7 @@ def one_number_in_three_times(nums):
         if cur_bit_sum % 3 == 1:
             res |= mask
 
-    # If signed bit is set then adjust the number
-    if res & 1 << 31:
+    if res & 1 << 31:   # 这一步很重要：If signed bit is set then adjust the number
         res -= 2 ** 32
 
     return res
