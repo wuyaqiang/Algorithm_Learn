@@ -15,7 +15,7 @@ class MedianFinder:
         self.small = []     # 用最大堆存储数组中较小的一半数, small中所有数据小于large中的最小值
         self.large = []     # 用最小堆存储数组中较大的一半数, large中所有数据大于small中的最大值
 
-    def addNum(self, num: int):
+    def addNum(self, num):
         if len(self.small) == len(self.large):
             heapq.heappush(self.large, -heapq.heappushpop(self.small, -num))
         else:

@@ -1,6 +1,6 @@
 '''
 剑指 Offer 第25题 合并两个排序的链表
-leetcode 101. Symmetric Tree
+leetcode 21. Merge Two Sorted Lists
 '''
 
 class ListNode:
@@ -12,7 +12,7 @@ def mergeTwoLists(l1, l2):
 
     # # 解法一：递归
     # if not l1:
-    #         return l2
+    #     return l2
     # if not l2:
     #     return l1
     # if l1.val <= l2.val:

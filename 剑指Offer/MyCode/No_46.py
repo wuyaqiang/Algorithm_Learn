@@ -25,4 +25,4 @@ def trans_int_to_string(num):
 
 if __name__ == '__main__':
 
-    print(trans_int_to_string(11))
+    print(trans_int_to_string(12258))

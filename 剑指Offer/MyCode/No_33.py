@@ -21,7 +21,7 @@ def verify_BST_postorder_sequence(seq):
     left, right = True, True
     if i > 0:
         left = verify_BST_postorder_sequence(seq[ : i])
-    if j < length - 1:
+    if i < length - 1:
         right = verify_BST_postorder_sequence(seq[i : length - 1])
 
     return left and right

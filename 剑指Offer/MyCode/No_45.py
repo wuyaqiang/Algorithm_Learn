@@ -17,7 +17,7 @@ def arrange_min_number(nums):
             num2 = nums[j] + nums[i]
             if num1 > num2: # 排成最小
                 nums[i], nums[j] = nums[j], nums[i]
-    res = "".join([str(n) for n in nums]).lstrip("0")   # 处理特殊情况：[0, 0, 0]
+    res = "".join(nums).lstrip("0")   # 处理特殊情况：[0, 0, 0]
     return "0" if res == "" else res
     # 解法二： 利用python内置排序sort，通过lambda自定义排序规则
     # 见leetcode 179 解析
@@ -36,7 +36,7 @@ def arrange_max_number(nums):
             num2 = nums[j] + nums[i]
             if num1 < num2: # 排成最大
                 nums[i], nums[j] = nums[j], nums[i]
-    res = "".join([str(n) for n in nums]).lstrip("0")   # 处理特殊情况：[0, 0, 0]
+    res = "".join(nums).lstrip("0")   # 处理特殊情况：[0, 0, 0]
     return "0" if res == "" else res
     # 解法二： 利用python内置排序sort，通过lambda自定义排序规则
     # 见leetcode 179 解析

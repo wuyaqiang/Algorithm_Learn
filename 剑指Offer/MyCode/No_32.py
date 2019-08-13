@@ -76,7 +76,26 @@ def in_order_iterative(root):
 def in_order_morris(root):
     '''
     中序遍历 非递归 不用栈 ——> Morris算法
+    http://www.learn4master.com/algorithms/morris-traversal-inorder-tree-traversal-without-recursion-and-without-stack
     '''
+    res = []
+    cur = root
+    while cur:
+        if not cur.left:
+            res.append(cur.val)
+            cur = cur.right
+        else:
+            pre = cur.left
+            while pre.right and pre.right != cur:
+                pre = pre.right
+            if pre.right == cur:
+                pre.right = None
+                res.append(cur.val)
+                cur = cur.right
+            else:
+                pre.right = cur
+                cur = cur.left
+    return res
 
 def post_order_recursive(root):
     '''
@@ -183,8 +202,8 @@ if __name__ == '__main__':
     # print(pre_order_recursive(root))
     # print(pre_order_iterative(root))
 
-    # print(in_order_recursive(root))
-    # print(in_order_iterative(root))
+    print(in_order_recursive(root))
+    print(in_order_iterative(root))
     print(in_order_morris(root))
 
     # print(post_order_recursive(root))

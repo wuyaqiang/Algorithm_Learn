@@ -43,8 +43,10 @@ def copy_random_list(head):
     while cur:  # 第三轮遍历，提取出所有复制结点
         next_node = cur.next.next
         copy_node = cur.next
+
         copy_cur.next = copy_node
         copy_cur = copy_node
+
         cur.next = next_node
         cur = next_node
     return sentinel.next
