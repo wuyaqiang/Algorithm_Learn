@@ -82,17 +82,24 @@ def in_order_morris(root):
     cur = root
     while cur:
         if not cur.left:
-            res.append(cur.val)
-            cur = cur.right
+            res.append(cur.val) # if there is no left child, visit current node
+            cur = cur.right # then we go the right branch
         else:
+            # find the right most leaf of root.left node.
             pre = cur.left
+            # when pre.right == null, it means we go to the right most leaf
+            # when pre.right == cur, it means the right most leaf has been visited in the last round
             while pre.right and pre.right != cur:
                 pre = pre.right
+            # this means the pre.right has been set, it's time to go to current node
             if pre.right == cur:
                 pre.right = None
+                # means the current node is pointed by left right most child
+                # the left branch has been visited, it's time to print the current node
                 res.append(cur.val)
                 cur = cur.right
             else:
+                # the fist time to visit the pre node, make its right child point to current node
                 pre.right = cur
                 cur = cur.left
     return res

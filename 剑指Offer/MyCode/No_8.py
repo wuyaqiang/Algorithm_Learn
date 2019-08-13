@@ -4,8 +4,8 @@
 
 def get_next_node(node):
     '''
-    给定一颗二叉树和其中一个结点，请找出中序遍历序列的下一个结点；
-    树中包含指向左右孩子的指针与指向父结点的指针；。
+    给定一颗二叉树和其中一个结点，请找出中序遍历序列的下一个结点;
+    树中包含指向左右孩子的指针与指向父结点的指针;
     该题分为三种情况：
     1. 如果一个结点有右子树，则它的下一个结点就是它右子树中的最左子结点
     2. 如果一个结点没有右子树，且它是它父结点的左子结点，则它的下一个结点就是它的父结点
@@ -15,7 +15,7 @@ def get_next_node(node):
     if not node:
         return None
     next_node = None
-    if not node.right:
+    if node.right:
         next_node = node.right
         while next_node.left:
             next_node = next_node.left
