@@ -1,5 +1,6 @@
 '''
 剑指 Offer 第46题 把数字翻译成字符串
+leetcode 91. Decode Ways
 '''
 
 def trans_int_to_string(num):
