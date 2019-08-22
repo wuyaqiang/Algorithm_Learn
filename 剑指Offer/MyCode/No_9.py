@@ -33,18 +33,18 @@ class MyQueue:
         self.in_stack = []
         self.out_stack = []
 
-    def push(self, x: int) -> None:
+    def push(self, x):
         self.in_stack.append(x)
 
-    def pop(self) -> int:
+    def pop(self):
         self.move()
         return self.out_stack.pop()
 
-    def peek(self) -> int:
+    def peek(self):
         self.move()
         return self.out_stack[-1]
 
-    def empty(self) -> bool:
+    def empty(self):
         return not self.in_stack and not self.out_stack
 
     def move(self):
