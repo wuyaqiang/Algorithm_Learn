@@ -26,8 +26,8 @@ def two_number_in_two_times(nums):
     diff = 0
     for n in nums:
         diff ^= n
-    diff = diff & (~diff + 1)   # 得到diff中的最后一位1
-    # diff = diff & -diff
+    # diff = diff & (~diff + 1)   # 得到diff中的最后一位1
+    diff = diff & -diff
     n1, n2 = 0, 0
     for n in nums:
         if n & diff == 0:
