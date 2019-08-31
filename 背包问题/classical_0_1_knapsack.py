@@ -27,10 +27,10 @@ def knapsack_2(W, w_list, val_list):
 
     for i in range(1, n + 1):
         for j in range(1, W + 1):
-            if w_list[i - 1] > j:
-                dp[i][j] = dp[i - 1][j]
-            else:
+            if w_list[i - 1] <= j:
                 dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - w_list[i - 1]] + val_list[i - 1])
+            else:
+                dp[i][j] = dp[i - 1][j]
 
     return dp[n][W]
 
@@ -45,8 +45,9 @@ def knapsack_3(W, w_list, val_list):
     dp = [0] * (W + 1)
 
     for i in range(n):
-        for j in range(W, w_list[i], -1):
-            dp[j] = max(dp[j], dp[j - w_list[i]] + val_list[i])
+        for j in range(W, 0, -1):
+            if w_list[i] <= j:
+                dp[j] = max(dp[j], dp[j - w_list[i]] + val_list[i])
 
     return dp[W]
 
