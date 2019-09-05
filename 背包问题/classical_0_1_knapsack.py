@@ -52,6 +52,7 @@ def knapsack_3(W, w_list, val_list):
     return dp[W]
 
 
+
 if __name__ == '__main__':
 
     W = 11

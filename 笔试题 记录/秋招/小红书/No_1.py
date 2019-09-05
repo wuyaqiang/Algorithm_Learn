@@ -1,15 +1,3 @@
-# #coding=utf-8
-# import sys
-#
-#
-#
-#
-# if __name__ == "__main__":
-#
-#     input_arr, N = sys.stdin.readline().strip().split(";")
-#     input_arr = list(map(int, input_arr.split(",")))
-#     N = int(N)
-
 
 def function(strs):
 
