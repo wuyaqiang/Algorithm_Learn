@@ -7,7 +7,6 @@ def findDuplicate(nums):
     '''
     数组中重复的数字
     '''
-
     # 解法一：修改了原始数组，时间复杂度为O(n)
     # i = 0
     # while i < len(nums):
