@@ -2,7 +2,6 @@
 剑指 Offer 第15题 及位运算相关
 leetcode 136. Single Number
 leetcode 137. Single Number II
-leetcode 137. Single Number II
 leetcode 260. Single Number III
 leetcode 169. Majority Element
 leetcode 229. Majority Element II

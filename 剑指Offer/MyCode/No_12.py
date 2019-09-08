@@ -47,7 +47,7 @@ def has_path(board, word):
     # return False
 
     # 解法二 不使用 visited 矩阵，更加简洁
-    if not board or len(board) == 0 or not board[0] or len(board[0]) == 0:
+    if not board or len(board) == 0 or len(board[0]) == 0:
         return False
 
     def judge(board, rows, cols, row, col, word):

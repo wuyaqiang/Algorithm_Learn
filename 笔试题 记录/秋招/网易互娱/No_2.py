@@ -41,10 +41,12 @@ if __name__ == "__main__":
         N = int(sys.stdin.readline().strip())
         id_node_dict = {}
 
+        # 构建哈希表 key： 结点编号  value：结点
         for i in range(N):
             val, left, right = list(map(int, sys.stdin.readline().strip().split()))
             id_node_dict[i] = Node(val, left, right)
 
+        # 确定根节点：
         sub_tree_id = []
         for id, node in id_node_dict.items():
             if node.left != -1 and node.left not in sub_tree_id:
@@ -53,6 +55,7 @@ if __name__ == "__main__":
                 sub_tree_id.append(node.right)
         root_id = sum(range(N)) - sum(sub_tree_id)
 
+        # 构建二叉树：
         for id, node in id_node_dict.items():
             if node.left == -1:
                 node.left = None
