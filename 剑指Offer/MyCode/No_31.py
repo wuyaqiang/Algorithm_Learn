@@ -4,6 +4,7 @@ leetcode 946. Validate Stack Sequences
 '''
 
 def validate_stack_sequences(pushed, popped):
+
     if not pushed and not popped:
         return True
     if len(pushed) == 0 and len(popped) == 0:

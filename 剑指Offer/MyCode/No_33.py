@@ -8,6 +8,7 @@ def verify_BST_postorder_sequence(seq):
 
     if not seq or len(seq) < 1:
         return False
+
     length = len(seq)
     root = seq[length - 1]
     i = 0
@@ -29,4 +30,5 @@ def verify_BST_postorder_sequence(seq):
 if __name__ == '__main__':
 
     print(verify_BST_postorder_sequence([7,4,6,5]))
+
 

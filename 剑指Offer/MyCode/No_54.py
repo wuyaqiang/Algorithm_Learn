@@ -19,3 +19,4 @@ def kthSmallest(root, k):
             return cur.val
         cur = cur.right
     return -1
+
